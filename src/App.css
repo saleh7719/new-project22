@@ -1,0 +1,137 @@
+:root {
+  --obsidian-black: #050505;
+  --card-bg: #111111;
+  --accent-gold: #d4af37; /* ذهبي مطفي للفخامة */
+  --accent-red: #ff3e3e;
+  --text-white: #ffffff;
+  --text-gray: #666666;
+}
+
+body {
+  margin: 0;
+  background-color: var(--obsidian-black);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+}
+
+.obsidian-layout {
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+/* --- Floating Sidebar --- */
+.obsidian-sidebar {
+  width: 280px;
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-header {
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  color: var(--accent-gold);
+}
+
+.nav-link {
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.nav-link.active {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent-gold);
+  border-left: 3px solid var(--accent-gold);
+}
+
+/* --- Main Dashboard View --- */
+.obsidian-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Top Info Cards with Colored Glow --- */
+.info-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.obsidian-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+}
+
+.obsidian-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-5px);
+}
+
+.card-label { font-size: 12px; color: var(--text-gray); text-transform: uppercase; letter-spacing: 1px; }
+.card-value { font-size: 40px; font-weight: 800; margin: 15px 0; }
+
+/* --- Table Area --- */
+.data-panel {
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.elegant-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.elegant-table th {
+  text-align: left;
+  padding: 15px;
+  color: var(--text-gray);
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.elegant-table td {
+  padding: 20px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-gold {
+  background: var(--accent-gold);
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
